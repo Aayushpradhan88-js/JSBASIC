@@ -1,40 +1,48 @@
-// ....... 
-function squareNumbers(number){
-    return number * number
+//syntax
+
+function functionname(parameters1, parameter2, parameter3){
+    return parameters1 + parameter2 + parameter3
 }
 
-console.log(squareNumbers(5));   // 25
-let output = squareNumbers(3);
-console.log("output :", output); // 9
+//1
+console.log(functionname(2, 3, 4)); //9
+//2
 
-// .........
-function myFunc(theObj){
-    return theObj.car = "fortuner";
-}
-
-const myCar = {
-    car: "Lamborgini",
-    model: "01aweRTX"
-}
-console.log(myCar.model) // 01aweRTX
-console.log(myCar.car)   // Lamborgini
-
-console.log(myFunc(myCar)); // fortuner
-
-// ........ rewrite and understand the code .....???
-function myFunc(array){
-    array[0] = 30;
-}
-
-const arr = [45];
-
-let output2 = myFunc(arr);
-console.log(arr[0]);
-
-//.......
-let x = myFunction(4, 3);
+let x = functionname(2,3,1)
 console.log(x);
 
-function myFunction(a, b) {
-    return a * b;
+
+//Function Expression
+const user = function (string) {
+    return string;
 }
+
+const output = user("aayush");
+console.log("output :", output);
+
+
+
+
+console.log(sum(1,1));  
+
+function sum(a,b) {
+    return a+b;
+}
+
+
+(function username(string) {
+    console.log(`db connected to ${string} `);
+})("aabish"),
+
+(function username(string) {
+    console.log(`db connected to ${string} `);
+})("aabish")
+
+
+//function are objects
+
+functions
+
+
+
+
