@@ -62,12 +62,38 @@
 //     }
 // )
 
-const promise = new Promise(function(resolve, reject){
+/* Note:- promise -- wrong
+          Promise -- right
+
+          setTimeout always takes a function
+*/
+const promise = new Promise(function (resolve, reject) {
     setTimeout(() => {
         console.log("Async task is completed !!");
+        resolve();
+    }, 3000);
+})
+
+//.then is interconnected with resolve()
+promise.then(function () {
+    setTimeout(() => {
+        console.log("promise is compiled");
+        /*this code takes 2s to compile the code but resolve is in the promise 
+         variable so, first it will compile */
     }, 2000);
 })
 
-promise.then(function(){
-    console.log("promise is compiled");
+new Promise(function(resolve, reject){
+
+    setTimeout(() => {
+        console.log("i want to participate hackathon next time !!");
+        resolve();
+    }, 2000);
+
+}).then(function(){
+
+    setTimeout(() => {
+        console.log("now coding")
+    }, 3000);
+
 })
